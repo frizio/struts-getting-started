@@ -11,6 +11,8 @@ public class FirstAction extends ActionSupport {
     private MessageStore messageStore;
 
     private static int counter = 0;
+
+    private String username;
 	
     public MessageStore getMessageStore() {
         return messageStore;
@@ -20,9 +22,20 @@ public class FirstAction extends ActionSupport {
         return counter;
     }    
 
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
     public String execute() throws Exception {
         messageStore = new MessageStore() ;
         counter++;
+        if (username != null) {
+            messageStore.setMessage( messageStore.getMessage() + " " + username);
+        }
         return SUCCESS;
     }
 
