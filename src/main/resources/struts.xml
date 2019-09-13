@@ -11,6 +11,46 @@
     <constant name="struts.custom.i18n.resources" value="global" />
 
     <package name="basicstruts2" extends="struts-default">
+
+        <interceptors>
+ 		    <interceptor-stack name="appDefault">
+        	    <interceptor-ref name="defaultStack">
+      			    <param name="exception.logEnabled">true</param>
+      			    <param name="exception.logLevel">ERROR</param>
+   			    </interceptor-ref>
+ 	        </interceptor-stack>
+		</interceptors>
+		
+		<default-interceptor-ref name="appDefault" />
+
+        <global-results>
+            <result name="securityerror">/securityerror.jsp</result>
+            <result name="error">/error.jsp</result>
+        </global-results>
+
+        <global-exception-mappings>
+            <exception-mapping exception="cloud.frizio.web.strutsgs.register.exceptions.SecurityBreachException" result="securityerror" />
+            <exception-mapping exception="java.lang.Exception" result="error" />
+        </global-exception-mappings>
+
+        <action name="causesecurityexception" class="cloud.frizio.web.strutsgs.register.action.Register" method="throwSecurityException">
+        	<result>/register.jsp</result>
+        </action>
+        
+        <action name="causeexception" class="cloud.frizio.web.strutsgs.register.action.Register" method="throwException">
+        	<result>/register.jsp</result>
+        </action>
+        
+        <action name="causenullpointerexception" class="cloud.frizio.web.strutsgs.register.action.Register" method="throwNullPointerException">
+        	<result>/register.jsp</result>
+        </action>
+        
+        <action name="actionspecificexception" class="cloud.frizio.web.strutsgs.register.action.Register" method="throwSecurityException">
+        	<exception-mapping exception="cloud.frizio.web.strutsgs.register.exceptions.SecurityBreachException" result="login" />
+        	<result>/register.jsp</result>
+        	<result name="login">/login.jsp</result>
+        </action>
+
         <action name="index">
             <result>/index.jsp</result>
         </action>
@@ -24,6 +64,7 @@
         <action name="registerInput" class="cloud.frizio.web.strutsgs.register.action.Register" method="input" >
             <result name="input">/register.jsp</result>
         </action>
+    
     </package>
 
 </struts>

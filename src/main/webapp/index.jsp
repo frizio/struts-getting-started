@@ -47,6 +47,12 @@ uri="/struts-tags" %>
     </s:url>
     <p><s:a href="%{registerInputLinkES}">Por favor, regístrese</s:a> para nuestro sorteo</p>
 
+    <h1>Exception handling</h1>
+    <p><a href='<s:url action="causeexception" />'>Cause Exception</a></p>
+    <p><a href='<s:url action="causenullpointerexception" />'>Cause Null Pointer Exception</a></p>
+    <p><a href='<s:url action="causesecurityexception" />'>Cause Global Security Exception</a></p>
+    <p><a href='<s:url action="actionspecificexception" />'>Cause ActionSpecific Security Exception</a></p>
+    
     <hr />
     <s:text name="contact" />
 
