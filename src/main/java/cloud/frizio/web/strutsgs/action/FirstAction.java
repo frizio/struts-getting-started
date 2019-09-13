@@ -10,13 +10,20 @@ public class FirstAction extends ActionSupport {
 
     private MessageStore messageStore;
 
+    private static int counter = 0;
+	
     public MessageStore getMessageStore() {
         return messageStore;
     }
 
+    public int getCounter() {
+        return counter;
+    }    
+
     public String execute() {
         messageStore = new MessageStore() ;
+        counter++;
         return SUCCESS;
     }
-    
+
 }
