@@ -28,6 +28,14 @@ uri="/struts-tags" %>
     <p><a href="${thelink}">Saluta Bruce Phillips</a></p>
 
 
+    <h2>Struts 2 Form Tag</h2>
+
+    <p>Get your own personal hello by filling out and submitting this form.</p>
+    <s:form action="firstAction">
+        <s:textfield name="username" label="Enter your name" />
+        <s:submit value="Submit" />
+    </s:form>
+
 </body>
 
 </html>
