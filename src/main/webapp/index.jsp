@@ -36,6 +36,9 @@ uri="/struts-tags" %>
         <s:submit value="Submit" />
     </s:form>
 
+    <h1>Registration</h1>
+    <p><a href="register.jsp">Please register</a> for our prize drawing.</p>
+
 </body>
 
 </html>
