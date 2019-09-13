@@ -2,6 +2,7 @@
 .vscode/
 .settings/
 target/
+.factorypath
 
 # Compiled class file
 *.class
