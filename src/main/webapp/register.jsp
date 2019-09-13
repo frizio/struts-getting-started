@@ -21,6 +21,7 @@ contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
         <s:textfield key="personBean.age" />
         <s:submit />
     </s:form>
+    <s:debug/>
 </body>
 
 </html>

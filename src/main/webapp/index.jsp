@@ -57,7 +57,13 @@ uri="/struts-tags" %>
 
     <h3>Debugging</h3>
     <p><a href="<s:url action="index" namespace="config-browser" />">Launch the configuration browser</a></p>
-    
+    <s:url action="index" var="indexLink">
+        <s:param name="debug">browser</s:param>
+    </s:url>
+    <p><a href="${indexLink}">Reload this page with debugging</a></p>
+    <hr />
+
+    <s:debug/>
     <hr />
     
     <s:text name="contact" />

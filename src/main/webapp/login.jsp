@@ -12,6 +12,7 @@
     <h1>You Must Login</h1>
     <p>Please login</p>
     <p><a href="index.jsp">Return to the home page.</a></p>
+    <s:debug/>
 </body>
 
 </html>

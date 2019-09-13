@@ -16,6 +16,7 @@
         <s:property value="personBean" />
     </p>
     <p><a href="<s:url action='index' />">Return to home page</a>.</p>
+    <s:debug/>
 </body>
 
 </html>

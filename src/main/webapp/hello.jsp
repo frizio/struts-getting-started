@@ -24,6 +24,7 @@
     <p>
         <s:property value="messageStore" />
     </p>
+    <s:debug/>
 </body>
 
 </html>
