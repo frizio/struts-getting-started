@@ -10,6 +10,7 @@ uri="/struts-tags" %>
 <head>
     <meta charset="UTF-8" />
     <title>Struts GS</title>
+    <s:head/>
 </head>
 
 <body>
@@ -52,8 +53,13 @@ uri="/struts-tags" %>
     <p><a href='<s:url action="causenullpointerexception" />'>Cause Null Pointer Exception</a></p>
     <p><a href='<s:url action="causesecurityexception" />'>Cause Global Security Exception</a></p>
     <p><a href='<s:url action="actionspecificexception" />'>Cause ActionSpecific Security Exception</a></p>
+    <hr/>
+
+    <h3>Debugging</h3>
+    <p><a href="<s:url action="index" namespace="config-browser" />">Launch the configuration browser</a></p>
     
     <hr />
+    
     <s:text name="contact" />
 
 </body>
