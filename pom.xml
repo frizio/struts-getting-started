@@ -3,10 +3,13 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>cloud.frizio.web</groupId>
   <artifactId>struts-getting-started</artifactId>
-  <packaging>jar</packaging>
+
+  <packaging>war</packaging>
   <version>1.0.0</version>
+  
   <name>struts-getting-started</name>
   <url>http://maven.apache.org</url>
+
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
@@ -15,4 +18,5 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
+
 </project>
