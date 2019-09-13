@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <h3>Thank you for registering for a prize.</h3>
+    <h3><s:text name="thankyou" /></h3>
     <p>
         Your registration information:
         <s:property value="personBean" />

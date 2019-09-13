@@ -11,13 +11,14 @@ contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 </head>
 
 <body>
+    <h1><s:text name="greeting" /></h1>
     <h3>Register for a prize by completing this form.</h3>
 
     <s:form action="register">
-        <s:textfield name="personBean.firstName" label="First name" />
-        <s:textfield name="personBean.lastName" label="Last name" />
-        <s:textfield name="personBean.email" label="Email" />
-        <s:textfield name="personBean.age" label="Age" />
+        <s:textfield key="personBean.firstName" />
+        <s:textfield key="personBean.lastName" />
+        <s:textfield key="personBean.email" />
+        <s:textfield key="personBean.age" />
         <s:submit />
     </s:form>
 </body>
