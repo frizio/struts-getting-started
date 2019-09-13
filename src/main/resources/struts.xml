@@ -16,6 +16,7 @@
             <result name="success">/hello.jsp</result>
         </action>
         <action name="register" class="cloud.frizio.web.strutsgs.action.Register" method="execute">
+            <result name="input">/register.jsp</result>
             <result name="success">/thankyou.jsp</result>
         </action>
     </package>
