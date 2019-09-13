@@ -12,6 +12,9 @@
         <action name="index">
             <result>/index.jsp</result>
         </action>
+        <action name="firstAction" class="cloud.frizio.web.strutsgs.action.FirstAction" method="execute">
+            <result name="success">/hello.jsp</result>
+        </action>
     </package>
 
 </struts>
