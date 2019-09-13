@@ -1,4 +1,4 @@
-package cloud.frizio.web.strutsgs.model;
+package cloud.frizio.web.strutsgs.register.model;
 
 
 public class Person {

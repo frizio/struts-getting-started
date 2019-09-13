@@ -1,8 +1,8 @@
-package cloud.frizio.web.strutsgs.action;
+package cloud.frizio.web.strutsgs.register.action;
 
 import com.opensymphony.xwork2.ActionSupport;
 
-import cloud.frizio.web.strutsgs.model.Person;
+import cloud.frizio.web.strutsgs.register.model.Person;
 
 public class Register extends ActionSupport {
     
