@@ -17,6 +17,17 @@ uri="/struts-tags" %>
     <p>
         <a href="<s:url action='firstAction'/>">First Action</a>
     </p>
+
+
+    <h2>Struts 2 url Tag with param</h2>
+
+    <s:url action="firstAction" var="thelink">
+        <s:param name="username">Bruce Phillips</s:param
+    ></s:url>
+
+    <p><a href="${thelink}">Saluta Bruce Phillips</a></p>
+
+
 </body>
 
 </html>
