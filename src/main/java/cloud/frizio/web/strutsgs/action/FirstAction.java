@@ -20,7 +20,7 @@ public class FirstAction extends ActionSupport {
         return counter;
     }    
 
-    public String execute() {
+    public String execute() throws Exception {
         messageStore = new MessageStore() ;
         counter++;
         return SUCCESS;
