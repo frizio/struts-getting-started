@@ -8,27 +8,45 @@
 
   <packaging>war</packaging>
   <version>1.0.0</version>
-  
+
   <name>struts-getting-started</name>
   <url>http://maven.apache.org</url>
 
   <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <maven.compiler.source>1.8</maven.compiler.source>
-    <maven.compiler.target>1.8</maven.compiler.target>
+      <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+      <maven.compiler.source>1.8</maven.compiler.source>
+      <maven.compiler.target>1.8</maven.compiler.target>
   </properties>
 
   <dependencies>
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>4.12</version>
-      <scope>test</scope>
-    </dependency>
+      <dependency>
+          <groupId>junit</groupId>
+          <artifactId>junit</artifactId>
+          <version>4.12</version>
+          <scope>test</scope>
+      </dependency>
   </dependencies>
 
   <build>
-    <finalName>${project.name}</finalName>
+      <finalName>${project.name}</finalName>
+      <plugins>
+          <plugin>
+              <groupId>org.eclipse.jetty</groupId>
+              <artifactId>jetty-maven-plugin</artifactId>
+              <version>9.4.20.v20190813</version>
+              <configuration>
+                  <webApp>
+                      <contextPath>/${project.build.finalName}</contextPath>
+                  </webApp>
+                  <stopKey>CTRL+C</stopKey>
+                  <stopPort>8999</stopPort>
+                  <scanIntervalSeconds>10</scanIntervalSeconds>
+                  <scanTargets>
+                      <scanTarget>src/main/webapp/WEB-INF/web.xml</scanTarget>
+                  </scanTargets>
+              </configuration>
+          </plugin>
+	    </plugins>
   </build>
 
 </project>
