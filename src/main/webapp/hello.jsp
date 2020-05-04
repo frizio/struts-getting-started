@@ -18,7 +18,7 @@
         <s:property value="messageStore.message" />
     </h2>
     <h2>
-        <p>I've said hello <s:property value="counter" /> times!</p>
+        I've said hello <s:property value="counter" /> times!
     </h2>
     <h2>Message with toString()</h2>
     <p>
